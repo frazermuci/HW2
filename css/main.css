@@ -1,0 +1,335 @@
+/*Authors:
+	Arameh Giragosian     , STD ID: 16195776, UCInetID: giragosi
+	Matthew Stephen Frazer, STD ID: 70509018, UCInetID: frazerm
+	IN4MATX 124 - Spring 2017
+	PA 1 -  Building a dynamic website using HTML, JavaScript, and CSS*/
+
+*{
+	font-family: arial;
+	margin: 0;
+}
+
+span.highlight {
+    background-color: #009999;
+    padding: 5px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+
+.container{
+	margin: 0 auto;
+	background-color: #fff;
+	max-width: 1200px;
+	padding: 0;
+}
+
+.comp_logo{
+	color: white;
+	background: #fff;
+	padding: 30px 0;
+	text-align: center;
+}
+
+.comp_logo a{
+	text-decoration: none;
+	color: black;
+}
+
+.comp_logo a:active {
+	color: #009999;
+}
+
+.navbar{
+	background: #009999;
+	padding: 10px;
+}
+
+.navbar li{
+	padding: 10px 15px;
+	display: inline;
+}
+
+.navbar a{
+	text-decoration: none;
+	color: white;
+}
+
+.navbar a:hover{
+	color: black;
+}
+
+.banner{
+	background-image: url("../images/banner.jpg");
+	background-size: cover;
+	background-position: center center;
+	padding: 250px 0 250px 0 ;
+	text-align: center;
+	max-height: 100%;
+}
+
+.banner h2{
+	color: #ffffff;
+	font-size: 3em;
+	line-height: 70px;
+}
+
+.banner p {
+	color: #ffffff;
+	font-size: 1.4em;
+	font-weight: normal;
+	padding: 0 0 20px 0;
+	line-height: 50px;
+}
+
+.about{
+	background-image: url("../images/about_us.jpg");
+	background-size: cover;
+	background-position: center center;
+	padding: 250px 0 250px 0 ;
+	text-align: center;
+	max-height: 100%;
+}
+
+.about h2{
+	color: #ffffff;
+	font-size: 3em;
+	line-height: 70px;
+}
+
+.about p {
+	color: #ffffff;
+	font-size: 1.4em;
+	font-weight: normal;
+	padding: 0 0 20px 0;
+	line-height: 50px;
+}
+
+.button {
+	color: white;
+	background-color: royalblue;
+	padding: 10px 30px;
+	display: inline-block;
+	text-align: center;
+	border-radius: .3em;
+	border: 1px solid white;
+	text-decoration: none;
+}
+
+.button:hover{
+	color: royalblue;
+	background-color: white;
+	border: 1px solid royalblue;
+}
+
+.products {
+	background-color: #FFFAFA;
+	margin: 0px;
+}
+
+.products h2 {
+	color: #009999;
+	font-size: 30px;
+	text-align: center;
+	padding: 30px 0px;
+}
+
+.products br {
+	padding: 0px;
+	margin: 0px;
+}
+
+.products table tr td{
+	border: 1px solid #009999;
+	text-align: center;
+	color: royalblue;
+}
+
+.products h3 {
+	color: black;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.products h5 {
+	color: #009999;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.products h6 {
+	color: gray;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.products img{
+	padding: 10px;
+	margin: 0px;
+	width: 220px;
+}
+
+.singleProduct {
+	display: inline-block;
+	border-radius: 1em;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.singleProduct:hover{
+	position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 500;
+}
+
+.price{
+	color: red;
+	padding-bottom: 10px;
+	font-weight: bold; 
+}
+
+.productInfo {
+	background-color: #FFFAFA;
+	margin: 0px;
+}
+
+.productInfo h2 {
+	color: black;
+	font-size: 30px;
+	text-align: left;
+	padding: 30px 30px;
+}
+.productInfo table {
+	padding: none;
+}
+
+.productInfo img {
+	width: 535px;
+}
+
+.productInfo table tr td{
+	border: none;
+	text-align: center;
+}
+
+.smallImage {
+}
+
+.smallImage li {
+	list-style-type: none;
+}
+
+.smallImage img {
+	width: 100px;
+	padding: 5px 20px 0px 0px;
+	margin: none;
+}
+
+.shoeInfo {
+	padding: 20px;
+	text-align: left;
+}
+
+.shoeInfo h1{
+	color: black;
+}
+
+.shoeInfo h4{
+	color: #009999;
+	padding-top: 20px;
+}
+
+.shoeInfo h4{
+	color: #009999;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.shoeInfo h6{
+	color: gray;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.shoePrice {
+	color: red;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.shoeSize{
+	padding-top: 20px;
+}
+
+.shoeQuantity {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.shoeSize.shoeDescription{
+	padding-top: 20px;
+}
+
+.customerInfo {
+	padding: none;
+}
+
+.customerInfo h2{
+	color: gray;
+	padding: 40px;
+}
+
+.customerName {
+	color: black;
+	padding-left: 40px;
+}
+
+.customerPhone {
+	color: black;
+	padding-left: 40px;
+	padding-top: 40px;
+}
+
+.customerShippingAddress {
+	color: black;
+	padding-left: 40px;
+	padding-top: 40px;
+}
+
+.shippingMethod {
+	color: black;
+	padding-left: 40px;
+	padding-top: 40px;
+}
+
+.cardInfo {
+	color: black;
+	padding-left: 40px;
+	padding-top: 40px;
+}
+
+.customerBillingAddress {
+	color: black;
+	padding-left: 40px;
+	padding-top: 40px;
+}
+
+.placeOrderButton {
+	padding: 40px;
+}
+
+.footer
+{
+	color: white;
+	background: #009999;
+	padding: 40px 0;
+	text-align: center;
+}
