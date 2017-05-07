@@ -66,7 +66,7 @@
 		<div class="navbar">
 			<ul>
 				<li><a href="index.php">Home</a></li>
-				<li><a href="products.html">Products</a></li>
+				<li><a href="products.php">Products</a></li>
 				<li><a href="about.html">About Us</a></li>
 				<li><a href="our_team.html">Our Team</a></li>
 			</ul>
@@ -82,28 +82,28 @@
 					<!-- PUREBOOST SHOES-->
 					<td><h3>PUREBOOST</h3>
 						<h5>MEN'S RUNNING SHOES</h5>
-							<img class="singleProduct" src="./images/PUREBOOST_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('PUREBOOST_SHOES');">
+							<img class="singleProduct" src="./images/PUREBOOST_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('PUREBOOST_SHOES', 'PUREBOOST');">
 						<h6>Color: Core Black</h6>
 						<div class="price">$200.00</div>
 					</td>
 					<!-- STAN SMITH BOOST SHOES -->
 					<td><h3>STAN SMITH BOOST</h3>
 						<h5>MEN'S ORIGINAL SHOES</h5>
-							<img class="singleProduct" src="./images/STAN_SMITH_BOOST_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('STAN_SMITH_BOOST_SHOES');">
+							<img class="singleProduct" src="./images/STAN_SMITH_BOOST_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('STAN_SMITH_BOOST_SHOES', 'STAN SMITH BOOST');">
 						<h6>Color: Collegiate Navy</h6>
 						<div class="price">$140.00</div>
 					</td>
 					<!-- SUPERSTAR BOOST SHOES -->
 					<td><h3>SUPERSTAR BOOST</h3>
 						<h5>MEN'S ORIGINAL SHOES</h5>
-							<img class="singleProduct" src="./images/SUPERSTAR_BOOST_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('SUPERSTAR_BOOST_SHOES');">
+							<img class="singleProduct" src="./images/SUPERSTAR_BOOST_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('SUPERSTAR_BOOST_SHOES', 'SUPERSTAR BOOST');">
 						<h6>Color: Core Black</h6>
 						<div class="price">$120.00</div>
 					</td>
 					<!-- GAZELLE SHOES -->
 					<td><h3>GAZELLE</h3>
 						<h5>MEN'S ORIGINAL SHOES</h5>
-							<img class="singleProduct" src="./images/GAZELLE_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('GAZELLE_SHOES');">
+							<img class="singleProduct" src="./images/GAZELLE_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('GAZELLE_SHOES', 'GAZELLE');">
 						<h6>Color: Collegiate Royal</h6>
 						<div class="price">$80.00</div>
 					</td>
@@ -113,28 +113,28 @@
 					<!-- ULTRABOOST X CLIMA SHOES -->
 					<td><h3>ULTRABOOST X CLIMA</h3>
 						<h5>WOMEN'S RUNNING SHOES</h5>
-							<img class="singleProduct" src="./images/ULTRABOOST_X_CLIMA_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('ULTRABOOST_X_CLIMA_SHOES');">
+							<img class="singleProduct" src="./images/ULTRABOOST_X_CLIMA_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('ULTRABOOST_X_CLIMA_SHOES', 'ULTRABOOST X CLIMA');">
 						<h6>Color: Glow Orange</h6>
 						<div class="price">$180.00</div>
 					</td>
 					<!-- SUPERSTAR SHOES -->
 					<td><h3>SUPERSTAR</h3>
 						<h5>WOMEN'S ORIGINAL SHOES</h5>
-							<img class="singleProduct" src="./images/SUPERSTAR_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('SUPERSTAR_SHOES');">
+							<img class="singleProduct" src="./images/SUPERSTAR_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('SUPERSTAR_SHOES', 'SUPERSTAR');">
 						<h6>Color: White Ftw</h6>
 						<div class="price">$80.00</div>
 					</td>
 					<!-- NMD_R1 SHOES -->
 					<td><h3>NMD_R1</h3>
 						<h5>WOMEN'S ORIGINAL SHOES</h5>
-							<img class="singleProduct" src="./images/NMD_R1_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('NMD_R1_SHOES');">
+							<img class="singleProduct" src="./images/NMD_R1_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('NMD_R1_SHOES', 'NMD_R1');">
 						<h6>Color: Core Black</h6>
 						<div class="price">$170.00</div>
 					</td>
 					<!-- PUREBOOST X SHOES -->
 					<td><h3>PUREBOOST X</h3>
 						<h5>WOMEN'S RUNNING SHOES</h5>
-							<img class="singleProduct" src="./images/PUREBOOST_X_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('PUREBOOST_X_SHOES');">
+							<img class="singleProduct" src="./images/PUREBOOST_X_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('PUREBOOST_X_SHOES', 'PUREBOOST X');">
 						<h6>Color: Bright Red</h6>
 						<div class="price">$150.00</div>
 					</td>
@@ -144,28 +144,28 @@
 					<!-- TUBULAR INVADER STRAP SHOES -->
 					<td><h3>TUBULAR INVADER STRAP</h3>
 						<h5>KIDS UNISEX ORIGINAL SHOES</h5>
-							<img class="singleProduct" src="./images/TUBULAR_INVADER_STRAP_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('TUBULAR_INVADER_STRAP_SHOES');">
+							<img class="singleProduct" src="./images/TUBULAR_INVADER_STRAP_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('TUBULAR_INVADER_STRAP_SHOE', 'TUBULAR INVADER STRAP');">
 						<h6>Color: Olive Cargo</h6>
 						<div class="price">$85.00</div>
 					</td>
 					<!-- RAPIDARUN UNCAGED SHOES -->
 					<td><h3>RAPIDARUN UNCAGED</h3>
 						<h5>KIDS UNISEX RUNNING SHOES</h5>
-							<img class="singleProduct" src="./images/RAPIDARUN_UNCAGED_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('RAPIDARUN_UNCAGED_SHOES');">
+							<img class="singleProduct" src="./images/RAPIDARUN_UNCAGED_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('RAPIDARUN_UNCAGED_SHOES', 'RAPIDARUN UNCAGED');">
 						<h6>Color: Solid Grey</h6>
 						<div class="price">$65.00</div>
 					</td>
 					<!-- ALPHABOUNCE AMS SHOES -->
 					<td><h3>ALPHABOUNCE AMS</h3>
 						<h5>KIDS UNISEX RUNNING SHOES</h5>
-							<img class="singleProduct" src="./images/ALPHABOUNCE_AMS_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('ALPHABOUNCE_AMS_SHOES');">
+							<img class="singleProduct" src="./images/ALPHABOUNCE_AMS_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('ALPHABOUNCE_AMS_SHOES', 'ALPHABOUNCE AMS');">
 						<h6>Color: Clear Grey</h6>
 						<div class="price">$90.00</div>
 					</td>
 					<!-- EQT RUNNING SUPPORT 93 SHOES -->
 					<td><h3>EQT RUNNING SUPPORT 93</h3>
 						<h5>KIDS UNISEX ORIGINAL SHOES</h5>
-							<img class="singleProduct" src="./images/EQT_RUNNING_SUPPORT_93_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('EQT_RUNNING_SUPPORT_93_SHOES');">
+							<img class="singleProduct" src="./images/EQT_RUNNING_SUPPORT_93_SHOES_001.jpg" title="Buy Now" onClick="getProductInfo('EQT_RUNNING_SUPPORT', 'EQT RUNNING SUPPORT 93');">
 						<h6>Color: Core Black</h6>
 						<div class="price">$70.00</div>
 					</td>
