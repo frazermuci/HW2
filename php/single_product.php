@@ -17,8 +17,8 @@ echo '<html>
 	<link rel="stylesheet" href="css/main.css"></link>
 	
 	<script src="./js/auto_fill.js"></script>
-	<!-- <script src="./js/invoice.js"></script> -->
-	<!--<script src="./js/validation.js"></script> -->
+	<script src="./js/invoice.js"></script>
+	<script src="./js/validation.js"></script>
 </head>
 <body>
 	<!-- Header -->

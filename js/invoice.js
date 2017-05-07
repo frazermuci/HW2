@@ -48,5 +48,5 @@ function generate_invoice()
     emailBody += "Billing Address: "+billingAddr+"\n";
     emailBody += "Billing City/Town: "+bCityTown+"\n";
     
-    window.location.href = "mailto:somebody@example.com?Subject=Your%20Purchase%20Information&body="+emailBody;
+    //window.location.href = "mailto:somebody@example.com?Subject=Your%20Purchase%20Information&body="+emailBody;
 }
