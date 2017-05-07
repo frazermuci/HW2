@@ -8,7 +8,6 @@ echo '<html>
 <script>
 </script>
 <title>NMD_R1 Shoes</title>
-
 <!-- Authors:
      Arameh Giragosian     , STD ID: 16195776, UCInetID: giragosi
      Matthew Stephen Frazer, STD ID: 70509018, UCInetID: frazerm
@@ -18,6 +17,8 @@ echo '<html>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="css/main.css"></link>
+	
+	<script src="./js/auto_fill.js"></script>
 	<!-- <script src="./js/invoice.js"></script> -->
 	<!--<script src="./js/validation.js"></script> -->
 </head>
@@ -36,7 +37,6 @@ echo '<html>
 			</ul>
 		</div>
 	</div>
-
 	<!-- Products Informations-->
 		<div class="container">
 			<div class="productInfo">
@@ -91,9 +91,8 @@ echo '<html>
 						PHONE NUMBER: <input type="text" name="phone"/>EMAIL: <input type="text" name="email"/>
 					</div>
 					<div class="customerShippingAddress">
-						SHIPPING ADDRESS: <input type="text" name="shippingAddress" size="50"/>CITY/TOWN: <input type="text" name="shippingCity"/>STATE: <select>
-					<option value="cs">California</option>
-					</select>
+						SHIPPING ADDRESS: <input type="text" name="shippingAddress" size="50"/>CITY/TOWN: <input type="text" name="shippingCity"/>
+					<br/> STATE: <input class="state_input" type="text" name="state"/> ZIP: <input id="zip1_id" type="text" name="zip1" onkeyup="autoFillZip(this);"/>
 					</div>
 				</div>
 				<div class="shippingMethod">
@@ -109,9 +108,8 @@ echo '<html>
 					EXP. DATE: <input type="date" name="address"/>
 				</div>
 				<div class="customerBillingAddress">
-					BILLING ADDRESS: <input type="text" name="billingAddress" size="50"/>CITY/TOWN: <input type="text" name="billingCity"/>STATE: <select>
-					<option value="cs">California</option>
-					</select>
+					BILLING ADDRESS: <input type="text" name="billingAddress" size="50"/>CITY/TOWN: <input type="text" name="billingCity"/>
+					<br/> STATE: <input class="ba_state_input" type="text" name="state"/> ZIP: <input id="zip2_id" type="text" name="zip2" onkeyup="autoFillZip(this);"/>
 				</div>
 				<div class="placeOrderButton">
 					<button class="button" onClick="generate_invoice()">CHECKOUT YOUR ORDER</button>
@@ -120,7 +118,6 @@ echo '<html>
 			<br />
 			</div>
 		</div>
-
 	<!-- Footer -->
 	<div class="container footer">
 		&copy; AWESOME SHOES. All rights reserved.
