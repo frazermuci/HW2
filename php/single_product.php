@@ -1,8 +1,6 @@
 <?php 
 if($_GET['shoe_page'])
 {
-//header('Content-Type: text/javascript');
-//$content = readfile('../js/single_product.js');
 echo '<html>
 <head>
 <script>
@@ -92,7 +90,8 @@ echo '<html>
 					</div>
 					<div class="customerShippingAddress">
 						SHIPPING ADDRESS: <input type="text" name="shippingAddress" size="50"/>CITY/TOWN: <input type="text" name="shippingCity"/>
-					<br/> STATE: <input class="state_input" type="text" name="state"/> ZIP: <input id="zip1_id" type="text" name="zip1" onkeyup="autoFillZip(this);"/>
+					<br/> STATE: <input class="state_input" type="text" name="state"/> ZIP: <input id="zip1_id" type="text" name="zip1" onkeyup="autoFillZipTax(this);"/> 
+					</br> TAX: <h1 id = "tax1"></h1>
 					</div>
 				</div>
 				<div class="shippingMethod">
@@ -109,7 +108,8 @@ echo '<html>
 				</div>
 				<div class="customerBillingAddress">
 					BILLING ADDRESS: <input type="text" name="billingAddress" size="50"/>CITY/TOWN: <input type="text" name="billingCity"/>
-					<br/> STATE: <input class="ba_state_input" type="text" name="state"/> ZIP: <input id="zip2_id" type="text" name="zip2" onkeyup="autoFillZip(this);"/>
+					<br/> STATE: <input class="ba_state_input" type="text" name="state"/> ZIP: <input id="zip2_id" type="text" name="zip2" onkeyup="autoFillZipTax(this);"/> 
+					<br/> TAX: <h1 id = "tax2"></h1>
 				</div>
 				<div class="placeOrderButton">
 					<button class="button" onClick="generate_invoice()">CHECKOUT YOUR ORDER</button>

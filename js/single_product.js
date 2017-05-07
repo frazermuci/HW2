@@ -43,7 +43,7 @@ function getProductInfo(name, shoeName)
 {
 	if(xmlHttp.readyState == 0 || xmlHttp.readyState == 4)
 	{
-		xmlHttp.open("GET", "./php/connect.php?name="+name, true);
+		xmlHttp.open("GET", "./php/single_product_db.php?name="+name, true);
 		xmlHttp.onreadystatechange = genLoadNewPage(shoeName);
 		xmlHttp.send(null);
 	}

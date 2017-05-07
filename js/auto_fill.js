@@ -33,33 +33,29 @@ function sendOffAjaxGet(callback, get_string)
 	{;}
 }
 
-function genCallback(className)
+function genCallback(className, taxTag)
 {
 	function callback()
 	{
 		if(xmlHttp.status == 200 && xmlHttp.readyState == 4)
 		{
-			console.log(xmlHttp.responseText);
-			document.getElementsByClassName(className)[0].value = xmlHttp.responseText;
+			var split = xmlHttp.responseText.split("|");
+			document.getElementsByClassName(className)[0].value = split[0];
+			document.getElementById(taxTag).innerHTML = split[1];
 		}
 	}
 	return callback;
 }
 
-function autoFillZip(element)
+function autoFillZipTax(element)
 {
 	
 	if(element.name == "zip1")
 	{
-		sendOffAjaxGet(genCallback("state_input"), "tax=false&zip="+element.value);
+		sendOffAjaxGet(genCallback("state_input", "tax1"), "zip_info="+element.value);
 	}
 	else
 	{
-		sendOffAjaxGet(genCallback("ba_state_input"), "tax=false&zip="+element.value);
+		sendOffAjaxGet(genCallback("ba_state_input", "tax2"), "zip_info="+element.value);
 	}
-}
-
-function autoFillTax(element)
-{
-	sendOffAjaxGet(genCallback("tax_tag"), "zip=false&tax="+element.value);
 }

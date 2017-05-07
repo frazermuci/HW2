@@ -1,26 +1,15 @@
 <?php
 require('read_in_csvs.php');
 
-$echoable = "";
+$echoable = "|";
 	
-if($_GET['zip'] && $_GET['zip'] != "false")
+if($_GET['zip_info'])
 {
-	$arr = read_zip_codes();
-	$key = "\"" . $_GET['zip'] . "\"";
-	if(array_key_exists($key, $arr))
+	$arr = read_tax_rates_zip_info();
+	if(array_key_exists($_GET['zip_info'], $arr))
 	{
-		$echoable =  str_replace("\"", "", $arr[$key]);
+		$echoable =  $arr[$_GET['zip_info']];
 	}
 }
-
-if($_GET['tax'] && $_GET['tax'] != "false")
-{
-	$arr = read_tax_rates();
-	if(array_key_exists($_GET['tax'], $arr))
-	{
-		$echoable =  $arr[$_GET['tax']];
-	}
-}
-	
 echo $echoable;
 ?>
