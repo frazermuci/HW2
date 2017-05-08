@@ -118,7 +118,7 @@ function checkAddress(bill_or_ship)
     var cityTown = inputs[1].value;
     
     var billingPat = /^[1-9]*[ A-z]*$/;
-    var cityPat = /^[A-z]*$/;
+    var cityPat = /^[A-z ]*$/;
     if(billingAddr == "")
     {
         window.alert("Please specify a "+ bill_or_ship+" address");
@@ -332,7 +332,8 @@ function sendOff()
 	{
 		if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
 		{
-			console.log(xmlHttp.responseText);
+			document.open();
+			document.write(xmlHttp.responseText);	
 		}
 	}
 	

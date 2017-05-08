@@ -2,14 +2,42 @@
 require_once('connect.php');
 global $conn;
 
-function checkForInjection($string)
-{;}
+function checkForInjection($arr)
+{
+	foreach($arr as $string)
+	{
+		if(preg_match("/[#=\*\|;,:%]|(Select|Delete)(?=(.*From))|Insert(?=(.*Into))|Drop(?=(.*Table))|Create(?=(.*(Schema|Table)))|Update(?=(.*Set))|(Or|And)(?=(.*(In|Any|All|=|\!=|)))/i",$string))
+		{
+			echo "Detected SQL statement in value " . $string;
+			exit();
+		}
+	}
+}
 
+function checkValidationForm($arr)
+{
+	$patterns = array("/^[^0-9()*&^%$#@!.,;:]*$/", "/^[^0-9()*&^%$#@!.,;:]*$/",
+					  "/^[1-9][0-9]{2}-[0-9]{3}-[0-9]{4}$/", "/^[0-9A-z]*@[0-9A-z]*\.[a-z]{2,3}$/",
+					  "/^[1-9]*[ A-z]*$/", "/^[ A-z]*$/", "/^[ A-z]*$/", "/^[0-9]*$/",
+					  "/^[0-9]*\.[0-9]*$/", "/^[A-z]*$/", "/^[0-9]{12}$/", "/^[0-9]{3,4}$/",
+					  "/^(2[0-9]{3})-(1[0-2]|0[1-9])-(0[1-9]|[12][0-9]|3[01])$/", "/^[1-9]*[ A-z]*$/",
+					  "/^[A-z ]*$/", "/^[A-z ]*$/", "/^[0-9]*$/", "/^[0-9]*\.[0-9]*$/", "/^[ A-z]*$/", "/^[0-9]*$/",
+					  "/^[0-9]*$/", "/^[0-9]*$/");
+	for($i = 0; $i < sizeof($patterns); ++$i)
+	{
+		if(!preg_match($patterns[$i], $arr[$i]))
+		{
+			echo "form input invalid";
+			exit();
+		}
+	}
+}
 
 if($_GET['order_info'])
 {
 $arr = explode("|", $_GET['order_info']);
 checkForInjection($arr);
+checkValidationForm($arr);
 $prepared = $conn->prepare("INSERT INTO order_info.contact_info (fname, lname, pnumber, email) VALUES (:fname,:lname,:pnumber,:email)");
 $prepared->bindParam(':fname', $arr[0]);
 $prepared->bindParam(':lname', $arr[1]);
@@ -47,12 +75,32 @@ $prepared->bindParam(':size', $arr[20]);
 $prepared->bindParam(':quantity', $arr[21]);
 $prepared->execute();
 
-/*echo '<html>
+$subtotal = (int)$arr[21] * (int)$arr[19];
+$tax = (float)$arr[17];
+$total = $subtotal + $subtotal*$tax;
+
+echo '
+<html>
 <head>
 </head>
 <body>
+<div>
+	<h1>Order Confirmation</h1>
+</div>
+<div>
+	<h1>Hello ' . $arr[0] . ' ' . $arr[1] . ' your purchase of ' . $arr[18] . ' has been processed.</h1>
+</div>
+<div>
+	<table>
+	<tr><td>'. 'Quantity: ' . $arr[21] . '</td></tr>
+	<tr><td>' . 'Price: $' . $arr[19] . '</td></tr>
+	<tr><td>' . 'Size: ' . $arr[20] . '</td></tr>
+	<tr><td>' . 'Sub-Total: ' . $subtotal . '</td></tr>
+	<tr><td>' . 'Sales Tax: ' . $arr[17] . '</td></tr>
+	<tr><td>' . 'Total: ' . $total . '</td></tr>
+	</table>
+</div>
 </body>
-</html>';*/
-echo $_GET['order_info'];
+</html>';
 }
 ?>
