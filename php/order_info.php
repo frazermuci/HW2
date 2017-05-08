@@ -117,12 +117,15 @@ echo '
 	<tr><td>'. 'Quantity: ' . $arr[21] . '</td></tr>
 	<tr><td>' . 'Price: $' . $arr[19] . '</td></tr>
 	<tr><td>' . 'Size: ' . $arr[20] . '</td></tr>
-	<tr><td>' . 'Sub-Total: ' . $subtotal . '</td></tr>
+	<tr><td>' . 'Sub-Total: $' . $subtotal . '</td></tr>
 	<tr><td>' . 'Sales Tax: ' . $arr[17] . '</td></tr>
-	<tr><td>' . 'Total: ' . $total . '</td></tr>
+	<tr><td>' . 'Total: $' . $total . '</td></tr>
 	</table>
 </div>
 </div>
+<div class="container footer">
+		&copy; AWESOME SHOES. All rights reserved.
+	</div>
 </body>
 </html>';
 }
