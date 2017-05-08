@@ -82,15 +82,37 @@ $total = $subtotal + $subtotal*$tax;
 echo '
 <html>
 <head>
+<title>Our Team</title>
+
+<!-- Authors:
+     Arameh Giragosian     , STD ID: 16195776, UCInetID: giragosi
+     Matthew Stephen Frazer, STD ID: 70509018, UCInetID: frazerm
+     IN4MATX 124 - Spring 2017
+     PA 2 -  Building a web application using PHP, Ajax, and MySQL -->
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-<div>
-	<h1>Order Confirmation</h1>
-</div>
+<div class="container">
+		<h1 style=\'text-align: center;\'>Order Confirmation</h1>
+		<div class="navbar">
+			<ul>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="products.php">Products</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="our_team.html">Our Team</a></li>
+			</ul>
+		</div>
+	</div>
+<div class="container">
+</br>
 <div>
 	<h1>Hello ' . $arr[0] . ' ' . $arr[1] . ' your purchase of ' . $arr[18] . ' has been processed.</h1>
 </div>
 <div>
+	</br>
 	<table>
 	<tr><td>'. 'Quantity: ' . $arr[21] . '</td></tr>
 	<tr><td>' . 'Price: $' . $arr[19] . '</td></tr>
@@ -99,6 +121,7 @@ echo '
 	<tr><td>' . 'Sales Tax: ' . $arr[17] . '</td></tr>
 	<tr><td>' . 'Total: ' . $total . '</td></tr>
 	</table>
+</div>
 </div>
 </body>
 </html>';
