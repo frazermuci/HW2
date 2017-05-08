@@ -18,11 +18,24 @@ function handleQuery($prep, $name)
 	return $str;
 }
 
+function checkForInjection($arr)
+{
+	foreach($arr as $string)
+	{
+		if(preg_match("/[#=\*\|;,:%]|(Select|Delete)(?=(.*From))|Insert(?=(.*Into))|Drop(?=(.*Table))|Create(?=(.*(Schema|Table)))|Update(?=(.*Set))|(Or|And)(?=(.*(In|Any|All|=|\!=|)))/i",$string))
+		{
+			echo "Detected SQL statement in value " . $string;
+			exit();
+		}
+	}
+}
+
 function getProductInfo($conn)
 { 
 	if($_GET['name'])
 	{
 		$name = $_GET['name'];
+		checkForInjection($name);
 		$prepared = $conn->prepare("SELECT * FROM product_info JOIN images ON product_info.product_name = images.product_name WHERE images.product_name = '". $name . "'");
 		$prepared->execute();
 		$result = handleQuery($prepared, $name);
