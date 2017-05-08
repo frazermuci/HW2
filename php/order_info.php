@@ -75,6 +75,8 @@ $prepared->bindParam(':size', $arr[20]);
 $prepared->bindParam(':quantity', $arr[21]);
 $prepared->execute();
 
+$conn->connection = null;
+
 $subtotal = (int)$arr[21] * (int)$arr[19];
 $tax = (float)$arr[17];
 $total = $subtotal + $subtotal*$tax;
